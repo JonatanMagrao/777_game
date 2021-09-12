@@ -15,3 +15,6 @@ uma idéia de tempo que seria utilizado para criar cada uma e dando uma noção 
 É um projeto micro, uma tentativa pessoal de ir levando aos poucos a prática dos aprendizados para um outro patamar. Com os
 aprendizados desse micro projeto com certeza vou pensar melhor antes de sair criando um sistema, melhorar minhas técnicas de
 metodologias ágeis como o Scrum e Kanban, além da economia de tempo e esforço para cada projeto.
+
+Para jogar, basta inicializar o arquivo game.py no terminal através do comando python game.py no windows ou python3 game.py no mac.
+O jogo começa com 10 créditos, sendo que a cada tentativa ele consome um ponto, caso nenhum número tenha se repetido. Caso pelo menos dois números tenham se repetido, é incrementado 1 ponto nos créditos e caso os três números sejam iguais (independente se os três deram 7 ou não) o usuário ganha 10 pontos que serão somados aos créditos que já existem. Ao final, caso tenha zerado os créditos, o jogo é fechado precisando ser inicializado novamente.
