@@ -3,29 +3,27 @@ from functions import *
 
 
 def game(creditos):
-    c = creditos
-    while c > 0:
-        limpar()
-        print(f'Vc está com {c} créditos.')
-        ganhou = ver(maior(sortear_(.5)))
+    total_creditos = creditos
+    while total_creditos > 0:
+        limpar_prompt()
+        print(f'Vc está com {total_creditos} créditos.')
+        ganhou = mensagem_sistema(numeros_repetidos(sortear_numeros(.5)))
 
         if ganhou == 1:
-            c -= 1
-            res = cont()
-            if res == 'N':
+            total_creditos -= 1
+            if continuar() == 'N':
+                ganhou
                 break
         elif ganhou == 2:
-            c += 1
-            print('Você ganhou mais 1 crédito!')
-            res = cont()
-            if res == 'N':
+            total_creditos += 1
+            ganhou
+            if continuar() == 'N':
                 break
         else:
-            c += 10
-            print('Você recebeu mais 10 créditos!')
-            res = cont()
-            if res == 'N':
+            total_creditos += 10
+            ganhou
+            if continuar() == 'N':
                 break
 
 game(10)
-system('clear')
+limpar_prompt()
